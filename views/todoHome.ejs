@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Todo List</title>
+        <link href="/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Todo List</h1>
+        <div id="todo-table">
+            <form action="/add" method="POST">
+                <input type="text" id="todo_item" name="todo_item" placeholder="Add an item.." required/>
+                <button type="submit">Add Item</button>
+            </form>
+            <ul>
+                <% todoItems.forEach((item, index) => { %>
+                    <a href="/delete/<%= item.id %>"><li><%= item.todo_item %></li></a>
+                <% }) %>
+            </ul>
+        </div>
+    </body>
+</html>

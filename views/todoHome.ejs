@@ -11,8 +11,10 @@
                 <button type="submit">Add Item</button>
             </form>
             <ul>
-                <% todoItems.forEach((item, index) => { %>
-                    <a href="/delete/<%= item.id %>"><li><%= item.todo_item %></li></a>
+                <% todoItems.forEach((item) => { %>
+                    <a href="/delete/<%= item.id %>">
+                        <li><%= item.todo_item %></li>
+                    </a>
                 <% }) %>
             </ul>
         </div>
